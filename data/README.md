@@ -1,0 +1,1 @@
+The data in this folder is a copy of the data [made availible for public download](https://data.dws.informatik.uni-mannheim.de/benchmarkmatchingtasks/index.html) as part of the work in [Profiling Entity Matching Benchmark Tasks](https://doi.org/10.1145/3340531.3412781).
