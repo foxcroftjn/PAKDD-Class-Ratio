@@ -47,3 +47,5 @@ For example, to train the first of the 10 fold configurations on a 1:2 ratio for
 ## Display the Results
 
 To render the results shown in the paper (Figures 2, Figure 3, Figure 4, and Table 2), see [create_figures.ipynb](create_figures.ipynb). This also contains the precision and recall results for the datasets not shown in Figure 3. **Note**: Figure 3 incorrectly is labeled as the results for the amazon-google dataset, but actually shows the results for the wdc_xlarge_watches dataset.
+
+To view the F1 results for when the classification threshold is fixed to 0.5, see [f1_results_fixed_threshold.ipynb](f1_results_fixed_threshold.ipynb).
