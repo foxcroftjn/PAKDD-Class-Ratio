@@ -20,4 +20,28 @@ The notebook [svm_linear.ipynb](svm_linear.ipynb) generates support vector class
 
 ## Train the Entity Matching Transformers
 
+To train the entity matching transformer (EMT) models, generate the formatted data with the script [prepare_emt_data.py](prepare_emt_data.py):
+
+```bash
+python prepare_emt_data.py
+```
+
+You can then train each EMT model with the following command. This should be run within the [entity-matching-transformer](entity-matching-transformer) directory, in a separate python environment with python 3.8.10 and the requirements in [entity-matching-transformer/requirements.txt](entity-matching-transformer/requirements.txt).
+
+```bash
+./train [data]-[ratio]-[fold_index]
+```
+
+The three parameters in the command are restricted to:
+
+- data $\in \\{\text{abt-buy}, \text{amazon-google}, \text{walmart-amazon}, \text{wdc\\_xlarge\\_computers}, \text{wdc\\_xlarge\\_shoes}, \text{wdc\\_xlarge\\_watches}\\}$
+- ratio $\in \\{1,2,3,4,5\\}$
+- fold_index $\in \\{0,1,2,3,4,5,6,7,8,9\\}$
+
+For example, to train the first of the 10 fold configurations on a 1:2 ratio for the abt-buy data:
+
+```bash
+./train abt-buy-2-0
+```
+
 ## Display the Results

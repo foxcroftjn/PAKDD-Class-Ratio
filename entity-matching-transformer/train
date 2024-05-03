@@ -1,0 +1,7 @@
+#!/bin/bash
+
+set -eu
+
+export PYTHONPATH=$(pwd)
+
+python -u src/run_training.py --model_type=roberta --model_name_or_path=roberta-base --data_processor=DeepMatcherProcessor --data_dir=${1} --train_batch_size=16 --eval_batch_size=16 --max_seq_length=265 --num_epochs=15.0 --seed=22

@@ -1,0 +1,6 @@
+torch==1.13.1
+pytorch-transformers==1.2.0
+pandas==1.5.3
+scikit-learn==1.2.1
+imbalanced-learn==0.8.0
+tensorboardX==2.6
