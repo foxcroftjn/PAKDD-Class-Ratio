@@ -20,7 +20,7 @@ The notebook [svm_linear.ipynb](svm_linear.ipynb) generates support vector class
 
 ## Train the Entity Matching Transformers
 
-To train the entity matching transformer (EMT) models, generate the formatted data with the script [prepare_emt_data.py](prepare_emt_data.py):
+To train the entity matching transformer (EMT) models, first generate the formatted data with the script [prepare_emt_data.py](prepare_emt_data.py):
 
 ```bash
 python prepare_emt_data.py
@@ -46,8 +46,9 @@ For example, to train the first of the 10 fold configurations on a 1:2 ratio for
 
 ## Display the Results
 
-To render the results shown in the paper (Figures 2, Figure 3, Figure 4, and Table 2), see [create_figures.ipynb](create_figures.ipynb). This also contains the precision and recall results for the datasets not shown in Figure 3. **Note**: Figure 3 incorrectly is labeled as the results for the amazon-google dataset, but actually shows the results for the wdc_xlarge_watches dataset.
+To render the results shown in the paper (Figure 2, Figure 3, Figure 4, and Table 2), see [create_figures.ipynb](create_figures.ipynb). This also contains the precision and recall results for the datasets not shown in Figure 3. **Note**: Figure 3 incorrectly is labeled as the results for the amazon-google dataset, but actually shows the results for the wdc_xlarge_watches dataset.
 
-To view the $F_1$ measure results for when the classification threshold is fixed to 0.5, see [fixed_threshold_results.ipynb](fixed_threshold_results.ipynb). This notebook also contains results for the [Matthews correlation coefficient](https://scikit-learn.org/stable/modules/generated/sklearn.metrics.matthews_corrcoef.html) (MCC) and [accuracy](https://scikit-learn.org/stable/modules/generated/sklearn.metrics.accuracy_score.html). We only compute these two additional measures for the fixed classification threshold of 0.5.
+<!-- The full path for fixed_threshold_results.ipynb is required because of https://github.com/orgs/community/discussions/61164 -->
+To view the $F_1$ measure results for when the classification threshold is fixed to 0.5, see [fixed_threshold_results.ipynb](/foxcroftjn/PAKDD-Class-Ratio/blob/main/fixed_threshold_results.ipynb). This notebook also contains results for the [Matthews correlation coefficient](https://scikit-learn.org/stable/modules/generated/sklearn.metrics.matthews_corrcoef.html) (MCC) and [accuracy](https://scikit-learn.org/stable/modules/generated/sklearn.metrics.accuracy_score.html). We only compute these two additional measures for the fixed classification threshold of 0.5.
 
 Reported accuracy improves as the class ratio grows, contrary to $F_1$ measure and MCC. This is because accuracy is computed on both classes (not just the matches) and the increase in the number of correctly identified non-matches is greater than the decrease in the number of correctly identified matches.
